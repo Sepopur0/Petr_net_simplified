@@ -23,9 +23,9 @@ def runtrans(graph,marking,namelist):
         else:
             screen.blit(name, (centerxy[0][0]-15, centerxy[0][1]-30))
         ptr = ptr+1
-    mark="Current state: {"+ str(marking[0])+' '+str(marking[2])+' '+str(marking[4])+'}'
+    mark="Input state:("+ str(marking[0])+' '+str(marking[2])+' '+str(marking[4])+')'
     overflow="Too many states to be visualized! "
-    if(marking[0]>=2 or marking[2]>=2or marking[4]>=2):
+    if(marking[0]>=2 or marking[2]>=2 or marking[4]>=2):
         mark=overflow+mark
     markul=font.render(mark,False,green)
     screen.blit(markul,(60,500))
